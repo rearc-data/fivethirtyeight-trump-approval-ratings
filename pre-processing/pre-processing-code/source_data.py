@@ -28,13 +28,22 @@ def data_to_s3(frmt):
         filename = data_set_name + frmt
         file_location = '/tmp/' + filename
 
-        with open(file_location, 'wb') as f:
-            print('hi')
-            f.write(response.read())
-            f.close()
+        #with open(file_location, 'wb') as f:
+        #    print('hi')
+         #   f.write(response.read())
+          #  f.close()
 
-  
-
+                # opening the zip file in READ mode 
+        listOfFiles = []
+        with ZipFile(file_location, 'r') as zip: 
+            # printing all the contents of the zip file 
+            #zip.printdir() 
+            listOfFiles = zip.namelist()
+            # extracting all the files 
+            zip.extractall()
+            #print('Files have been extracted!') 
+        firstElem = listOfFiles[0]
+        print(firstElem)
 
         # variables/resources used to upload to s3
         # s3_bucket = os.environ['S3_BUCKET']
@@ -43,7 +52,7 @@ def data_to_s3(frmt):
 
         # s3.upload_file(file_location, s3_bucket, new_s3_key + filename)
 
-        print('Uploaded: ' + filename)
+        #print('Uploaded: ' + filename)
 
         # deletes to preserve limited space in aws lamdba
         # os.remove(file_location)
