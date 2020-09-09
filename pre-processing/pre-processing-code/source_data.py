@@ -50,9 +50,9 @@ def data_to_s3(frmt):
             print('name: ' + filename)
     
         # variables/resources used to upload to s3
-        #s3_bucket = os.environ['S3_BUCKET']
-        #new_s3_key = data_set_name + '/dataset/'
-        #s3 = boto3.client('s3')
+        s3_bucket = os.environ['S3_BUCKET']
+        new_s3_key = data_set_name + '/dataset/'
+        s3 = boto3.client('s3')
 
         s3_uploads = []
         asset_list = []
@@ -61,9 +61,12 @@ def data_to_s3(frmt):
             for filename in f:
                 
                 
-                obj_name = os.path.join(r, filename).split('/', 3).pop().replace(' ', '_').lower()
+                #obj_name = os.path.join(r, filename).split('/', 3).pop().replace(' ', '_').lower()
                 file_location = os.path.join(r, filename)
-                new_s3_key = data_set_name + '/dataset/' + obj_name
+                obj_name = os.path.join(r, filename)
+                new_s3_key = data_set_name + '/dataset' + obj_name
+                print('s3 key: ' + new_s3_key)
+                print('file loc: ' + file_location) 
 
                 has_changes = md5_compare(s3, s3_bucket, new_s3_key, file_location)
                 if has_changes:
