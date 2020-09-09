@@ -19,7 +19,7 @@ marketplace = boto3.client(
 
 s3_bucket = os.environ['S3_BUCKET']
 data_set_arn = os.environ['DATA_SET_ARN']
-data_set_id = data_set_arn.split("/", 1)[1]
+data_set_id = data_set_arn.split('/', 1)[1]
 product_id = os.environ['PRODUCT_ID']
 data_set_name = os.environ['DATA_SET_NAME']
 new_s3_key = data_set_name + '/dataset/'
