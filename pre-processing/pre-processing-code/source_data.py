@@ -53,7 +53,7 @@ def source_dataset():
     s3_uploads = []
     asset_list = []
 
-    for r, d, f in os.walk(folder_dir):
+    for r, d, f in os.walk('/tmp/' + folder_dir):
         for filename in f:
 
             obj_name = os.path.join(r, filename).split(
