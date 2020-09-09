@@ -2,7 +2,7 @@
     <img src="./rearc_logo_rgb.png" alt="Rearc Logo" title="Rearc Logo" height="52" />
 </a>
 
-How unpopular is Donald Trump? | FiveThirtyEight
+Donald Trump's Approval Ratings | FiveThirtyEight
 =========================
 
 You can subscribe to the AWS Data Exchange product utilizing the automation featured in this repository by visiting []().
