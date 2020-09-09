@@ -29,7 +29,7 @@ This resource is presented in the CSV format for all data files and contains a R
 ## Contact Details
 - If you find any issues with or have enhancement ideas for this product, open up a GitHub [issue](https://github.com/rearc-data/fivethirtyeight-trump-approval-ratings/issues) and we will gladly take a look at it. Better yet, submit a pull request. Any contributions you make are greatly appreciated :heart:.
 - If you are looking for specific open datasets currently not available on ADX, please submit a request on our project board [here](https://github.com/rearc-data/covid-datasets-aws-data-exchange/projects/1).
-- If you have questions about the source data, please contact [FiveThirtyEight](contact@fivethirtyeight.com).
+- If you have questions about the source data, please contact FiveThirtyEight at contact@fivethirtyeight.com.
 - If you have any other questions or feedback, send us an email at data@rearc.io.
 
 ## About Rearc
