@@ -11,6 +11,7 @@ def source_dataset():
 
     source_dataset_url = 'https://projects.fivethirtyeight.com/data-webpage-data/datasets/trump-approval-ratings.zip'
     response = None
+    
     retries = 5
     for attempt in range(retries):
         try:
@@ -29,10 +30,9 @@ def source_dataset():
 
     if response == None:
         raise Exception('There was an issue downloading the dataset')
-    
+
     data_set_name = os.environ['DATA_SET_NAME']
-    filename = data_set_name + '.zip'
-    zip_location = '/tmp/' + filename
+    zip_location = '/tmp/' + data_set_name + '.zip'
 
     # unzips the zipped folder
     with open(zip_location, 'wb') as f:
@@ -44,8 +44,7 @@ def source_dataset():
 
     os.remove(zip_location)
 
-    for dir_name in os.listdir('/tmp'):
-        folder_dir = dir_name
+    folder_dir = os.listdir('/tmp')[0]
 
     # variables/resources used to upload to s3
     s3_bucket = os.environ['S3_BUCKET']
