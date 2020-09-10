@@ -5,7 +5,7 @@
 Donald Trump's Approval Ratings | FiveThirtyEight
 =========================
 
-You can subscribe to the AWS Data Exchange product utilizing the automation featured in this repository by visiting []().
+You can subscribe to the AWS Data Exchange product utilizing the automation featured in this repository by visiting [https://aws.amazon.com/marketplace/pp/prodview-qwvtstd6ihv5g](https://aws.amazon.com/marketplace/pp/prodview-qwvtstd6ihv5g).
 
 ## Main Overview
 
