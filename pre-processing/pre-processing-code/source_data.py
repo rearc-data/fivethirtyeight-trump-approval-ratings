@@ -52,7 +52,7 @@ def source_dataset():
 
     s3_uploads = []
     asset_list = []
-
+    has_changes = None
     for r, d, f in os.walk(folder_dir):
         for filename in f:
 
@@ -78,7 +78,7 @@ def source_dataset():
     if count_updated_data > 0:
         asset_list = list(
             map(lambda upload: upload['asset_source'], s3_uploads))
-        if len(asset_list) == 0:
+        if len(asset_list) == 0 and has_changes:
             raise Exception(
                 'Something went wrong when uploading files to s3')
     # asset_list is returned to be used in lamdba_handler function
